@@ -1,0 +1,31 @@
+
+<!-- Hide Enrollment Tab -->
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const hideTab = ~[tlist_sql;
+        select
+          case
+            when students.schoolid = 79438 then 'false'
+            when u_def_ext_students.enrollment_forms_enabled = 1 then 'false'
+            else 'true'
+          end
+        from
+          students
+          left join u_def_ext_students
+            on u_def_ext_students.studentsdcid = students.dcid
+        where
+          id = ~(curstudid)
+    ]~(res)[/tlist_sql];
+    
+    const tabEnrollment = document.getElementById('enrollExpressForms');
+    
+    if (hideTab) {
+        tabEnrollment.classList.add('hidden');
+    } else {
+        tabEnrollment.style.backgroundColor = '#edf104';
+    }
+});
+</script>
+
+<!-- end Hide Enrollment Tab -->
