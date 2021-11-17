@@ -1,0 +1,28 @@
+
+<!-- Enable Enrollment Forms -->
+<table class="linkDescList" id="enrollmentFormTable">
+    <colgroup>
+        <col>
+        <col>
+    </colgroup>
+    <thead>
+        <tr>
+            <th>Enrollment Forms</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="bold">Enrollment Forms Enabled</td>
+            <td><input id="enrollment_forms_enabled" type="checkbox" name="[students.U_Students_Extension]enrollment_forms_enabled" value="1"></td>
+        </tr>
+    </tbody>
+</table>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const formTable = document.getElementById('enrollmentFormTable');
+    document.getElementById('btnSubmit').parentElement.before(formTable);
+});
+</script>
+
+<!-- end Enable Enrollment Forms -->
